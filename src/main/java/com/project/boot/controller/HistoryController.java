@@ -17,7 +17,7 @@ import java.util.List;
 public class HistoryController {
 
     @Autowired
-    HistoryService service;
+    private HistoryService service;
 
     private URI getUri(Object id) {
         return ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();

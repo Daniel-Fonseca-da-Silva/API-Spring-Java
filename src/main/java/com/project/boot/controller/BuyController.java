@@ -21,15 +21,15 @@ import java.net.URI;
 public class BuyController {
 
     @Autowired
-    ClientService clientService;
+    private ClientService clientService;
 
     @Autowired
-    CreditCardService creditCardService;
+    private CreditCardService creditCardService;
 
     @Autowired
-    HistoryService historyService;
+    private HistoryService historyService;
 
-    private URI getUri(Object id) {
+    private URI getUri(String id) {
         return ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();
     }
 

@@ -18,7 +18,7 @@ import java.net.URI;
 public class CreditCardController {
 
     @Autowired
-    CreditCardService service;
+    private CreditCardService service;
 
     private URI getUri(String id) {
         return ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();

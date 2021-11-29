@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class CreditCardService {
 
     @Autowired
-    CreditCardRepository repo;
+    private CreditCardRepository repo;
 
     public void createCreditCard(CreditCard creditCard) {
         repo.save(creditCard);

@@ -12,7 +12,7 @@ import java.util.List;
 public class HistoryService {
 
     @Autowired
-    HistoryRepository repo;
+    private HistoryRepository repo;
 
     public void createHistory(History history) {
         repo.save(history);

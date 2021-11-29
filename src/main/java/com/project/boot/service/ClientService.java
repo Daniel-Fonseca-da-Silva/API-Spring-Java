@@ -11,7 +11,7 @@ import java.util.*;
 public class ClientService {
 
     @Autowired
-    ClientRepository repo;
+    private ClientRepository repo;
 
     public void createClient(Client client) {
         repo.save(client);

@@ -12,7 +12,7 @@ import java.util.*;
 public class ProductService {
 
     @Autowired
-    ProductRepository repo;
+    private ProductRepository repo;
 
     public void createProduct(Product product) {
         product.setId(null);
