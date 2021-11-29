@@ -1,0 +1,4 @@
+mvn spring-boot:build-image
+
+sudo docker run api:0.0.1-SNAPSHOT
+
