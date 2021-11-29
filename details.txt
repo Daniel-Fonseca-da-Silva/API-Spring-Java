@@ -1,0 +1,55 @@
+********************************
+******   STONE  PAYMENTS  ******
+********************************
+**** YOUR CHALLENGE DETAILS ****
+********************************
+
+Create Database
+sudo mysql -u root
+SET GLOBAL validate_password.length = 6;
+SET GLOBAL validate_password.policy=LOW; 
+CREATE DATABASE api;
+CREATE USER 'api'@'localhost' IDENTIFIED BY 'api123456';
+GRANT ALL ON api.* TO 'api'@'localhost';
+FLUSH PRIVILEGES;
+\q;
+
+Login & password
+user 
+user321
+
+Swagger documentation endpoints
+http://localhost:9095/swagger-ui.html
+
+POST  localhost:9095/starstore/products
+{
+   "title":"Blusa do Imperio",
+   "price":7990,
+   "zipcode":"78993-000",
+   "seller":"João da Silva",
+   "thumbnailHd":"https://cdn.awsli.com.br/600x450/21/21351/produto/3853007/f66e8c63ab.jpg",
+   "date":"26/11/2015"
+}
+
+GET localhost:9095/starstore/products
+
+POST localhost:9095/starstore/buy
+{
+    "client": {
+	"client_id": "69fed465-e789-43b8-9453-e2fd697b917a",
+        "client_name":"Luke Skywalker",
+        "total_to_pay":1236
+    },
+    "creditCard": {
+        "card_number":"1234123412341234",
+        "value":7990,
+        "cvv":789,
+        "card_holder_name":"Luke Skywalker",
+        "exp_date":"12/24"
+    }
+}
+
+GET localhost:9095/starstore/history
+
+GET localhost:9095/starstore/history/clientId
+
